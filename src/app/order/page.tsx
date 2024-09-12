@@ -6,6 +6,7 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Select } from '@/components/ui/select'
+import Layout from '../dashboard/layout' 
 
 interface Product {
   id: number
@@ -34,6 +35,7 @@ export default function Order() {
   }
 
   return (
+    <Layout> {/* Envuelve el contenido con el Layout */}
     <div className="p-4">
       <h1 className="text-2xl font-bold mb-4">Realizar Pedido</h1>
       <form onSubmit={handleSubmit} className="space-y-4">
@@ -72,5 +74,6 @@ export default function Order() {
         <Button type="submit">Realizar Pedido</Button>
       </form>
     </div>
+    </Layout>
   )
 }

@@ -1,10 +1,8 @@
-
+// app/dashboard/layout.tsx
 import Link from 'next/link'
-import { Home, Package, Users, Truck ,Bot} from 'lucide-react'
+import { Home, Package, Users, Truck, Search, Phone ,Box} from 'lucide-react'
 import { Notifications } from '@/components/Notifications'
-import Chatbot from '@/components/Chatbot';
-
-
+import Chatbot from '@/components/Chatbot'
 
 export default function DashboardLayout({
   children,
@@ -16,7 +14,7 @@ export default function DashboardLayout({
       {/* Sidebar */}
       <aside className="w-64 bg-white shadow-md">
         <div className="p-4">
-          <h1 className="text-2xl font-semibold text-gray-800">Bienvenidp</h1>
+          <h1 className="text-2xl font-semibold text-gray-800">Bienvenido</h1>
         </div>
         <nav className="mt-6">
           <Link href="/dashboard" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200">
@@ -35,9 +33,17 @@ export default function DashboardLayout({
             <Truck className="w-5 h-5 mr-2" />
             Tracking
           </Link>
-          <Link href="/dashboard/chatbot" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200">
-            <Bot className="w-5 h-5 mr-2" />
-            Chatbot
+          <Link href="/search" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200">
+            <Search className="w-5 h-5 mr-2" />
+            Search
+          </Link>
+          <Link href="/order" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200">
+            <Box className="w-5 h-5 mr-2" />
+            Order
+          </Link>
+          <Link href="/contact" className="flex items-center px-4 py-2 text-gray-700 hover:bg-gray-200">
+            <Phone className="w-5 h-5 mr-2" />
+            Contacto
           </Link>
         </nav>
       </aside>
@@ -50,7 +56,6 @@ export default function DashboardLayout({
             <Notifications />
           </div>
 
-      
           <div>
             <Chatbot />
           </div>
